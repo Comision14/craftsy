@@ -6,7 +6,6 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const { sendFile } = require('express/lib/response');
 
 var app = express();
 
@@ -18,10 +17,12 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', indexRouter);
 //app.use('/users', usersRouter);
+
 app.get('/',(req,res) => res.sendFile(path.resolve(__dirname,'views','index.html')));
 app.get('/product-detail',(req,res) => res.sendFile(path.resolve(__dirname,'views','productDetail.html')));
 app.get('/product-cart',(req,res) => res.sendFile(path.resolve(__dirname,'views','productCart.html')));
