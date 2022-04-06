@@ -12,7 +12,7 @@
 <body class="register">
     <header>
         <div class="header__logo">
-            <a href="/"><a href=""><img src="/images/logo.png" alt=""></a></a>
+            <a href="/"><img src="/images/logo.png" alt=""></a>
         </div>
 
         <nav class="header__menu">
@@ -29,9 +29,10 @@
     </header>
     <main>
         <section>
-            <h1>Bienvenido</h1>
+            <h1>Registrate</h1>
             <hr>
-            <form action="">
+            <form>
+                <article>
                 <div class="register__form-box">
                     <label for="nombre">Nombre</label>
                     <input class="register__form-input" type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre">
@@ -47,9 +48,9 @@
                     <input class="register__form-input" type="password" id="password" name="password" placeholder="Escribí tu contraseña">
                      <span class="register__text-error">Obligatorio</span>
                 </div>
-                <div>
-                    <h4>País de nacimiento</h4>
-                    <div class="register__form-box">
+                <div class="register__form-box">
+                        <label for="pais">Pais de nacimiento</label>
+
                         <select class="register__form-select" name="pais" id="pais">
                             <option value="" hidden selected>Por favor elegí uno...</option>
                             <option value="ar">Argentina</option>
@@ -57,7 +58,6 @@
                             <option value="uy">Uruguay</option>
                         </select>
                          <span class="register__text-error">Obligatorio</span>
-                    </div>
                 </div>
                 <div class="register__form-box">
                     <h4>Género</h4>
@@ -93,17 +93,22 @@
                         <label for="programacion">Programación</label>
                     </div>
                 </div>
+            </article>
                 <div class="register__form-box">
                     <h4>Dejanos tus comentarios</h4>
-                    <textarea class="register__form-input" name="comentarios" id="comentarios" cols="30" rows="10" style="resize: none;"></textarea>
+                    <textarea class="register__form-input" name="comentarios" id="comentarios" rows="10" style="resize: none;"></textarea>
                 </div>
-                <div class="register__form-box">
+                <div class="register__form-box register__center">
                     <input class="" type="checkbox" name="terminos" id="terminos">
                 <label for="terminos">Términos y condiciones</label>
                 </div>
-               
+                <div class="register__form-box register__center">
+
                 <button type="submit">Registrarme</button>
-                <button type="button">Cancelar</button>
+                <a href="/">
+                    <button type="button">Cancelar</button>
+                </a>
+                </div>
             </form>
         </section>
 
