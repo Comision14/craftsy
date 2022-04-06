@@ -1,3 +1,40 @@
 .register section{
-    
+    width: 300px;
+    background-color: white;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+.register h1{
+    text-transform: uppercase;
+    text-align: center;
+}
+.register form{
+    margin-top: 30px;
+}
+
+.register__form-box{
+    margin-bottom: 20px;
+}
+
+.register h4{
+    margin-bottom: 10px;
+}
+
+.register__form-input, .register__form-select{
+    width: 100%;
+    margin: 10px 0 0;
+    padding: 10px 5px;
+}
+
+.register__text-error{
+    color: red;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+.register__radio-box{
+    margin: 0 0 10px 5px;
+
+
 }
