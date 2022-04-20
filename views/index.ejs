@@ -8,7 +8,34 @@
 <body class="index">
 
     <%- include('./partials/header') %> 
-
+    <section class="index__banner">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="index__carousel-item carousel-item active" style="background-image: url('/images/banner/banner_1.jpg');">
+              </div>
+              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_2.jpg');">
+              </div>
+              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_3.jpg');">
+              </div>
+              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_4.jpg');">
+            </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </section>
     <main>
         <section class="index__products">
             <article class="index__products__product">
@@ -79,6 +106,8 @@
             </section>
         </aside>
     </main>
+    <%- include('./partials/footer') %> 
+
 </body>
 
 </html>
