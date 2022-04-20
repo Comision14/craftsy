@@ -1,29 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Craftsy | Login</title>
-    <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-<body class="login">
-    <header>
-        <div class="header__logo">
-            <a href="/"><img src="/images/logo.png" alt=""></a>
-        </div>
+    <%- include('./partials/head',{
+        title : 'Login'
+    })  %> 
 
-        <nav class="header__menu">
-            <ul class="header__menu__sitio">
-                <li><a href="">Smartphone</a></li>
-                <li><a href="">Tables</a></li>
-                <li><a href="">Computadoras</a></li>
-            </ul>
-            <ul class="header__menu__usuarios">
-                <li><a href="/register">Registro</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="login">
+    <%- include('./partials/header') %> 
+
     <main >
         <section>
             <h1>Ingresá</h1>

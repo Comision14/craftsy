@@ -1,26 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Craftsy | Detalle del Producto</title>
-    <link rel="stylesheet" href="/stylesheets/style.css"></head>
+<%- include('./partials/head',{
+    title : 'Detalle del producto'
+})  %> 
+
 <body>
-    <header>
-        <a href="/"><img class="header__logo" src="/images/logo.png" alt=""></a>
-        <nav class="header__menu">
-            <ul class="header__menu__sitio">
-                <li><a href="">Smartphone</a></li>
-                <li><a href="">Tables</a></li>
-                <li><a href="">Computadoras</a></li>
-            </ul>
-            <ul class="header__menu__usuarios">
-                <li><a href="/register">Registro</a></li>
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </nav>
-    </header>
+    <%- include('./partials/header') %> 
+
     <h1>Detalle del producto</h1>
 </body>
 </html>
