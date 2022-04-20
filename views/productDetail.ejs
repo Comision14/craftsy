@@ -4,9 +4,47 @@
     title : 'Detalle del producto'
 })  %> 
 
-<body>
+<body class="detail">
     <%- include('./partials/header') %> 
 
-    <h1>Detalle del producto</h1>
+    <main class="container mt-4">
+        <section class="row">
+            <article class="col-12 col-md-10 col-lg-8 mx-auto">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-12 col-md-5 col-lg-5">
+                            <div class="card-body">
+                                <img src="/images/img-phone-0<%= numberImage %>.jpg" class="img-fluid" alt="...">
+                                <div class="d-flex mt-2">
+                                    <img style="width: 33.3%;" src="/images/img-phone-01.jpg" alt="...">
+                                    <img style="width: 33.3%;" src="/images/img-phone-02.jpg" alt="...">
+                                    <img style="width: 33.3%;" src="/images/img-phone-03.jpg" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-7 col-lg-7">
+                            <div class="card-body">
+                                <h5 class="card-title">Nombre del producto</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <h6>Caractarísticas</h6>  
+                                <hr>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">An item</li>
+                                <li class="list-group-item">A second item</li>
+                                <li class="list-group-item">A third item</li>
+                              </ul>
+                            </div>
+               
+                              <div class="card-body d-flex flex-column flex-md-row align-items-md-center justify-content-end">
+                                <a href="#" class="btn btn-outline-dark m-1">Más info</a>
+                                <a href="#" class="btn btn-outline-primary m-1">Agregar al carrito</a>
+                              </div>
+                        </div>
+                    </div>
+                   
+                  </div>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

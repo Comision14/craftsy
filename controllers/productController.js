@@ -1,4 +1,10 @@
 module.exports = {
-    detail : (req,res) => res.render('productDetail'),
+    detail : (req,res) => {
+        const {id} = req.params;
+
+        res.render('productDetail',{
+            numberImage : id
+        })
+    },
     cart : (req,res) => res.render('productCart')
 }
