@@ -1,4 +1,5 @@
 const products = require('../data/products');
+const tutorials = require('../data/tutorials');
 
 module.exports = {
     index: (req, res) => {
@@ -10,7 +11,10 @@ module.exports = {
         return res.render('index', {
             celulares,
             tablets,
-            computadoras
+            computadoras,
+            tutorials
         })
     }
 }
+
+/* res.locals */

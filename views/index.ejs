@@ -1,101 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('./partials/head',{
-    title : 'Home'
-}) %> 
+<%- include('./partials/head',{ title : 'Home' }) %>
 
-<body class="index">
+    <body class="index">
 
-    <%- include('./partials/header') %> 
-    <section class="index__banner">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="index__carousel-item carousel-item active" style="background-image: url('/images/banner/banner_1.jpg');">
-              </div>
-              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_2.jpg');">
-              </div>
-              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_3.jpg');">
-              </div>
-              <div class="index__carousel-item carousel-item" style="background-image: url('/images/banner/banner_4.jpg');">
-            </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    </section>
-    <main>
-        <section class="index__products">
-            <h4>Celulares</h4>
-            <% celulares.forEach(({name}) => { %>
-                <article class="index__products__product">
-                    <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
-                    <h4><%= name %> </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum doloribus ipsa
-                        praesentium?</p>
-                    <a href="#" class="index__products__product__more">VER MÁS</a>
-                </article>
-            <% }) %>
-            <h4>Tablets</h4>
-            <% tablets.forEach(({name}) => { %>
-                <article class="index__products__product">
-                    <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
-                    <h4><%= name %> </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum doloribus ipsa
-                        praesentium?</p>
-                    <a href="#" class="index__products__product__more">VER MÁS</a>
-                </article>
-            <% }) %>
-            <h4>Computadoras</h4>
-            <% computadoras.forEach(({name}) => { %>
-                <article class="index__products__product">
-                    <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
-                    <h4><%= name %> </h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum doloribus ipsa
-                        praesentium?</p>
-                    <a href="#" class="index__products__product__more">VER MÁS</a>
-                </article>
-            <% }) %>
-        </section>
-        <aside>
-            <section class="index__tutorials">
-                <h3>Tutoriales</h3>
-                <article class="index__tutorials__tutorial">
-                    <img src="/images/aside-01.jpg" alt="">
-                    <p>Título del tutorial de reparación</p>
-                </article>
-                <article class="index__tutorials__tutorial">
-                    <img src="/images/aside-02.jpg" alt="">
-                    <p>Título del tutorial de reparación</p>
-                </article>
-                <article class="index__tutorials__tutorial">
-                    <img src="/images/aside-03.jpg" alt="">
-                    <p>Título del tutorial de reparación</p>
-                </article>
+        <%- include('./partials/header') %>
+            <section class="index__banner">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                            aria-label="Slide 4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="index__carousel-item carousel-item active"
+                            style="background-image: url('/images/banner/banner_1.jpg');">
+                        </div>
+                        <div class="index__carousel-item carousel-item"
+                            style="background-image: url('/images/banner/banner_2.jpg');">
+                        </div>
+                        <div class="index__carousel-item carousel-item"
+                            style="background-image: url('/images/banner/banner_3.jpg');">
+                        </div>
+                        <div class="index__carousel-item carousel-item"
+                            style="background-image: url('/images/banner/banner_4.jpg');">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
             </section>
-            <section class="index__advertising">
-                <h3>Publicidad</h3>
-                <article class="index__advertising__add">
-                    <img src="/images/ad-01.jpg" alt="">
-                    <img src="/images/ad-02.jpg" alt="">
-                </article>
-            </section>
-        </aside>
-    </main>
-    <%- include('./partials/footer') %> 
+            <main>
+                <section class="index__products">
+                    <h4>Celulares</h4>
+                    <% celulares.forEach(({name})=> { %>
+                        <article class="index__products__product">
+                            <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <h4>
+                                <%= name %>
+                            </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum doloribus
+                                ipsa
+                                praesentium?</p>
+                            <a href="#" class="index__products__product__more">VER MÁS</a>
+                        </article>
+                        <% }) %>
+                            <h4>Tablets</h4>
+                            <% tablets.forEach(({name})=> { %>
+                                <article class="index__products__product">
+                                    <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
+                                    <h4>
+                                        <%= name %>
+                                    </h4>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum
+                                        doloribus ipsa
+                                        praesentium?</p>
+                                    <a href="#" class="index__products__product__more">VER MÁS</a>
+                                </article>
+                                <% }) %>
+                                    <h4>Computadoras</h4>
+                                    <% computadoras.forEach(({name})=> { %>
+                                        <article class="index__products__product">
+                                            <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
+                                            <h4>
+                                                <%= name %>
+                                            </h4>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde
+                                                harum doloribus ipsa
+                                                praesentium?</p>
+                                            <a href="#" class="index__products__product__more">VER MÁS</a>
+                                        </article>
+                                        <% }) %>
+                </section>
+                <aside>
+                    <section class="index__tutorials">
+                        <h3>Tutoriales</h3>
+                        <% tutorials.forEach(tutorial => { %>
+                            <article class="index__tutorials__tutorial">
+                                <img src="/images/<%= tutorial.img %>" alt="">
+                                <p><%= tutorial.name %> </p>
+                            </article>
+                        <% }) %>
+                       
 
-</body>
+                    </section>
+                    <section class="index__advertising">
+                        <h3>Publicidad</h3>
+                        <article class="index__advertising__add">
+                            <img src="/images/ad-01.jpg" alt="">
+                            <img src="/images/ad-02.jpg" alt="">
+                        </article>
+                    </section>
+                </aside>
+            </main>
+            <%- include('./partials/footer') %>
+
+    </body>
 
 </html>
