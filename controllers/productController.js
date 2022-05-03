@@ -1,7 +1,17 @@
 const categories = require('../data/categories');
-const products = require('../data/products')
+const products = require('../data/products.json');
 
 module.exports = {
+    add : (req,res) => {
+        return res.render('productAdd',{
+            categories
+        })
+    },
+    store : (req,res) => {
+        const {name,price,category} = req.body;
+
+        return res.send('guardando....')
+    },
     detail : (req,res) => {
 
         const {idProduct} = req.params;
@@ -21,6 +31,24 @@ module.exports = {
         return res.render('categories',{
             name,
             products
+        })
+    },
+    search : (req,res) => {
+        
+        const {keyword} = req.query;
+        const result = products.filter(product => product.name.toLowerCase().includes(keyword.toLowerCase()));
+
+        let namesCategories = categories.map(category => {
+            return {
+                id : category.id,
+                name : category.name
+            }
+        });
+
+        return res.render('result',{
+            products : result,
+            keyword,
+            namesCategories
         })
     }
 }
