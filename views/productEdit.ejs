@@ -11,35 +11,34 @@
 
     <main>
         <section>
-            <h2>Agregar Producto</h2>
+            <h2>Editar Producto: <%= product.name %></h2>
             <hr>
-            <form method="POST" action="">
+            <form method="POST" action="/products/update/<%= product.id %>?_method=PUT">
                 <article>
                 <div class="register__form-box">
                     <label for="name">Nombre del producto</label>
-                    <input class="register__form-input" type="text" id="name" name="name">
+                    <input class="register__form-input" type="text" id="name" name="name" value="<%= product.name %>">
                 </div>
                 <div class="register__form-box">
                     <label for="price">Precio</label>
-                    <input class="register__form-input" type="number" id="price" name="price">
+                    <input class="register__form-input" type="number" id="price" name="price" value="<%= product.price %>">
                 </div>
          
                 <div class="register__form-box">
                         <label for="category">Categorias</label>
                         <select class="register__form-select" name="category" id="category">
-                            <option value="" hidden selected>Selecciona la categoría...</option>
-                          <% categories.forEach(category => { %>
-                            <option value="<%= category.id %>"><%= category.name %></option>
-                          <% }) %>
-                        </select>
-                       
+                            <% categories.forEach(category => { %>
+                              <option value="<%= category.id %>" <%= category.id === product.category ? 'selected' : null %>><%= category.name %></option>
+                            <% }) %>
+                          </select>
                 </div>
               
             </article>
                
-                <button type="submit">Guardar</button>
               
-                    <button type="reset">Limpiar</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+
                 </div>
             </form>
         </section>

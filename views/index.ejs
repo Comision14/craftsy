@@ -47,9 +47,10 @@
             <main>
                 <section class="index__products">
                     <h4>Celulares</h4>
-                    <% celulares.forEach(({name})=> { %>
+
+                    <% celulares.forEach(({name,id})=> { %>
                         <article class="index__products__product">
-                            <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
                             <h4>
                                 <%= name %>
                             </h4>
@@ -59,43 +60,51 @@
                             <a href="#" class="index__products__product__more">VER MÁS</a>
                         </article>
                         <% }) %>
-                            <h4>Tablets</h4>
-                            <% tablets.forEach(({name})=> { %>
-                                <article class="index__products__product">
-                                    <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
-                                    <h4>
-                                        <%= name %>
-                                    </h4>
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum
-                                        doloribus ipsa
-                                        praesentium?</p>
-                                    <a href="#" class="index__products__product__more">VER MÁS</a>
-                                </article>
-                                <% }) %>
-                                    <h4>Computadoras</h4>
-                                    <% computadoras.forEach(({name})=> { %>
-                                        <article class="index__products__product">
-                                            <a href="/products/detail/1"><img src="/images/img-phone-01.jpg" alt=""></a>
-                                            <h4>
-                                                <%= name %>
-                                            </h4>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde
-                                                harum doloribus ipsa
-                                                praesentium?</p>
-                                            <a href="#" class="index__products__product__more">VER MÁS</a>
-                                        </article>
-                                        <% }) %>
+                </section>
+                <section class="index__products">
+                    <h4>Tablets</h4>
+
+                    <% tablets.forEach(({name,id})=> { %>
+                        <article class="index__products__product">
+                            <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <h4>
+                                <%= name %>
+                            </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde harum
+                                doloribus ipsa
+                                praesentium?</p>
+                            <a href="#" class="index__products__product__more">VER MÁS</a>
+                        </article>
+                        <% }) %>
+                </section>
+                <section class="index__products">
+                    <h4>Computadoras</h4>
+
+                    <% computadoras.forEach(({name,id})=> { %>
+                        <article class="index__products__product">
+                            <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <h4>
+                                <%= name %>
+                            </h4>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, saepe! Unde
+                                harum doloribus ipsa
+                                praesentium?</p>
+                            <a href="#" class="index__products__product__more">VER MÁS</a>
+                        </article>
+                        <% }) %>
                 </section>
                 <aside>
                     <section class="index__tutorials">
                         <h3>Tutoriales</h3>
-                        <% tutorials.forEach(tutorial => { %>
+                        <% tutorials.forEach(tutorial=> { %>
                             <article class="index__tutorials__tutorial">
                                 <img src="/images/<%= tutorial.img %>" alt="">
-                                <p><%= tutorial.name %> </p>
+                                <p>
+                                    <%= tutorial.name %>
+                                </p>
                             </article>
-                        <% }) %>
-                       
+                            <% }) %>
+
 
                     </section>
                     <section class="index__advertising">

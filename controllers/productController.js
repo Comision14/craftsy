@@ -1,3 +1,7 @@
+const res = require('express/lib/response');
+const fs = require('fs');
+const path = require('path');
+
 const categories = require('../data/categories');
 const products = require('../data/products.json');
 
@@ -10,12 +14,58 @@ module.exports = {
     store : (req,res) => {
         const {name,price,category} = req.body;
 
-        return res.send('guardando....')
+        let lastID = products[products.length - 1].id;
+
+        let newProduct =  {
+            id: +lastID + 1,
+            name,
+            price: +price,
+            category: +category,
+            img: "noimage.jpeg"
+        }
+
+        products.push(newProduct);
+
+        fs.writeFileSync(path.resolve(__dirname,'..','data','products.json'),JSON.stringify(products,null,3),'utf-8')
+
+        return res.redirect('/')
+    },
+    edit : (req,res) => {
+
+        const {id} = req.params;
+        const product = products.find(product => product.id === +id);
+
+        return res.render('productEdit',{
+            categories,
+            product
+        })
+    },
+    update : (req,res) => {
+
+        const {id} = req.params;
+        const {name, price, category} = req.body;
+
+        const productsModify = products.map(product => {
+            if(product.id === +id){
+                let productModify = {
+                    ...product,
+                    name,
+                    price : +price,
+                    category : +category
+                }
+                return productModify
+            }
+            return product
+        })
+
+        fs.writeFileSync(path.resolve(__dirname,'..','data','products.json'),JSON.stringify(productsModify,null,3),'utf-8')
+
+        return res.redirect('/')
     },
     detail : (req,res) => {
 
-        const {idProduct} = req.params;
-        const product = products.find(product => product.id === +idProduct);
+        const {id} = req.params;
+        const product = products.find(product => product.id === +id);
         
         return res.render('productDetail',{
             product
@@ -36,7 +86,7 @@ module.exports = {
     search : (req,res) => {
         
         const {keyword} = req.query;
-        const result = products.filter(product => product.name.toLowerCase().includes(keyword.toLowerCase()));
+        const products = products.filter(product => product.name.toLowerCase().includes(keyword.toLowerCase()));
 
         let namesCategories = categories.map(category => {
             return {
@@ -46,7 +96,7 @@ module.exports = {
         });
 
         return res.render('result',{
-            products : result,
+            products,
             keyword,
             namesCategories
         })
