@@ -32,6 +32,22 @@
                             <% }) %>
                           </select>
                 </div>
+                <div class="register__form-box">
+                    <div class="d-flex align-content-center">
+                        <div>
+                            <label for="origin">Origen</label>
+                            <input class="register__form-input" type="text" value="<%= product.features[0] %>" id="origin" name="features">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="in-box" name="features" <%= product.features[1] && 'checked' %>>
+                            <label class="form-check-label" for="in-box">
+                              Original
+                            </label>
+                          </div>
+                    </div>
+                  
+                  
+                </div>
               
             </article>
                

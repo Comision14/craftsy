@@ -12,16 +12,22 @@ module.exports = {
         })
     },
     store : (req,res) => {
-        const {name,price,category} = req.body;
 
+        let {name,price,category,features} = req.body;
+
+        features = typeof features === "string" ? features.split() : features;
+        let inbox = features[1] ? true : false;
+        features[1] = inbox;
+       
         let lastID = products[products.length - 1].id;
 
         let newProduct =  {
             id: +lastID + 1,
-            name,
+            name : name.trim(),
             price: +price,
             category: +category,
-            img: "noimage.jpeg"
+            img: "noimage.jpeg",
+            features
         }
 
         products.push(newProduct);
@@ -43,7 +49,11 @@ module.exports = {
     update : (req,res) => {
 
         const {id} = req.params;
-        const {name, price, category} = req.body;
+        let {name, price, category,features} = req.body;
+
+        features = typeof features === "string" ? features.split() : features;
+        let inbox = features[1] ? true : false;
+        features[1] = inbox;
 
         const productsModify = products.map(product => {
             if(product.id === +id){
@@ -51,12 +61,13 @@ module.exports = {
                     ...product,
                     name,
                     price : +price,
-                    category : +category
+                    category : +category,
+                    features
                 }
                 return productModify
             }
             return product
-        })
+        });
 
         fs.writeFileSync(path.resolve(__dirname,'..','data','products.json'),JSON.stringify(productsModify,null,3),'utf-8')
 
@@ -86,7 +97,7 @@ module.exports = {
     search : (req,res) => {
         
         const {keyword} = req.query;
-        const products = products.filter(product => product.name.toLowerCase().includes(keyword.toLowerCase()));
+        const result = products.filter(product => product.name.toLowerCase().includes(keyword.toLowerCase()));
 
         let namesCategories = categories.map(category => {
             return {
@@ -96,9 +107,19 @@ module.exports = {
         });
 
         return res.render('result',{
-            products,
+            products : result,
             keyword,
             namesCategories
         })
+    },
+    remove : (req,res) => {
+        const {id} = req.params;
+
+        const productFilter = products.filter(product => product.id !== +id);
+
+        fs.writeFileSync(path.resolve(__dirname,'..','data','products.json'),JSON.stringify(productFilter,null,3),'utf-8')
+
+        return res.redirect('/')
+
     }
 }

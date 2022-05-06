@@ -29,19 +29,36 @@
                             <h6>Caractarísticas</h6>  
                                 <hr>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item">An item</li>
-                                <li class="list-group-item">A second item</li>
-                                <li class="list-group-item">A third item</li>
+                                <% if (product.features) { %>
+                                    <% product.features.forEach(feature => { %>
+                                        <% if (typeof feature === "boolean") { %>
+                                            <% if (feature === true) { %>
+                                            <li class="list-group-item">Original</li>
+                                            <% }else{ %>
+                                                <li class="list-group-item">Alternativo</li>
+                                            <% } %>
+                                        <% }else{ %>
+                                            <li class="list-group-item"><%= feature %></li>
+                                        <% } %>
+                                    <% }) %>
+                                <% }else{ %>
+                                <li class="list-group-item">No hay caracteristicas</li>
+
+                                <% } %>
+                             
                               </ul>
                             </div>
                
                               <div class="card-body d-flex flex-column flex-md-row align-items-md-center justify-content-end">
+                                  <form action="/products/remove/<%= product.id %>?_method=DELETE" method="POST">
+                                      <button type="submit" class="btn btn-outline-danger m-1">Eliminar</button>
+                                  </form>
                                 <a href="/products/edit/<%= product.id %>" class="btn btn-outline-success m-1">Editar</a>
                                 <a href="#" class="btn btn-outline-primary m-1">Agregar al carrito</a>
                               </div>
                         </div>
                     </div>
-                   
+
                   </div>
             </article>
         </section>
