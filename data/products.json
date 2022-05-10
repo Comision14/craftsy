@@ -1,189 +1,223 @@
 [
    {
       "id": 1,
+      "visible" : true,
       "name": "Samsung S22",
       "price": 1000,
       "category": 1,
       "img": "img-phone-01.jpg",
       "features": [
          "Jamaica",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 2,
+      "visible" : true,
       "name": "Iphone 11",
       "price": 2000,
       "category": 1,
       "img": "img-phone-03.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 3,
+      "visible" : true,
       "name": "Motorola E7",
       "price": 1800,
       "category": 1,
       "img": "img-phone-01.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 4,
+      "visible" : true,
       "name": "Nokia 1100",
       "price": 100,
       "category": 1,
       "img": "img-phone-02.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 5,
+      "visible" : true,
       "name": "Alcatel Z2",
       "price": 200,
       "category": 1,
       "img": "img-phone-03.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 6,
+      "visible" : true,
       "name": "Ipad 10",
       "price": 1000,
       "category": 2,
       "img": "img-phone-01.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 7,
+      "visible" : true,
       "name": "Galaxy Tab A7",
       "price": 3000,
       "category": 2,
       "img": "img-phone-02.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 8,
+      "visible" : true,
       "name": "Xiaomi Mi5",
       "price": 500,
       "category": 2,
       "img": "img-phone-03.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 9,
+      "visible" : true,
       "name": "Asus i7",
       "price": 20000,
       "category": 3,
       "img": "img-phone-01.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 10,
+      "visible" : true,
       "name": "Acer i3",
       "price": 10000,
       "category": 3,
       "img": "img-phone-02.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 11,
+      "visible" : true,
       "name": "HP ProBook 4520s",
       "price": 15000,
       "category": 3,
       "img": "img-phone-03.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 12,
+      "visible" : true,
       "name": "MacBook Air 13",
       "price": 30000,
       "category": 3,
       "img": "img-phone-01.jpg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 13,
+      "visible" : true,
       "name": "Asus i7 12Gb SDD 1TB",
       "price": 1000,
       "category": 3,
       "img": "noimage.jpeg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 14,
+      "visible" : true,
       "name": "Motorola G4",
       "price": 200,
       "category": 1,
       "img": "noimage.jpeg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 15,
+      "visible" : true,
       "name": "Samsung",
       "price": 1000,
       "category": 1,
       "img": "noimage.jpeg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 16,
+      "visible" : true,
       "name": "Ipad 11",
       "price": 2500,
       "category": 2,
       "img": "noimage.jpeg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    },
    {
       "id": 17,
+      "visible" : true,
       "name": "Producto con categorias",
       "price": 10000,
       "category": 3,
       "img": "noimage.jpeg",
       "features": [
          "China",
-         true
+         12,
+         "Usado"
       ]
    }
 ]

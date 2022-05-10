@@ -11,10 +11,19 @@
 
     <main>
         <section>
-            <h2>Agregar Producto</h2>
+            <div class="d-flex justify-content-between">
+                <h2>Agregar Producto</h2>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="visible" name="visible" checked>
+                        <label class="form-check-label" for="visible">
+                          Visible
+                        </label>
+                      </div>
+            </div>
             <hr>
             <form method="POST" action="">
                 <article>
+                    
                 <div class="register__form-box">
                     <label for="name">Nombre del producto</label>
                     <input class="register__form-input" type="text" id="name" name="name">
@@ -34,30 +43,30 @@
                         </select>
                 </div>
                 <div class="register__form-box">
-                    <div class="d-flex align-content-center">
-                        <div>
-                            <label for="origin">Origen</label>
-                            <input class="register__form-input" type="text" id="origin" name="features">
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="in-box" name="features">
-                            <label class="form-check-label" for="in-box">
-                              Original
-                            </label>
-                          </div>
-                    </div>
-                  
-                  
+                    <label for="origin">Origen</label>
+                    <select class="register__form-select" name="origin" id="origin">
+                        <option value="" hidden selected>Selecciona el origen...</option>
+                      <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                      <% }) %>
+                    </select>
                 </div>
                 <div class="register__form-box">
-                    
+                    <label for="state">Estado</label>
+                    <select class="register__form-select" name="state" id="state">
+                        <option value="" hidden selected>Selecciona el origen...</option>
+                      <% categories.forEach(category => { %>
+                        <option value="<%= category.id %>"><%= category.name %></option>
+                      <% }) %>
+                    </select>
                 </div>
-              
+                <div class="register__form-box d-flex justify-content-end align-items-end">
+                    <button type="reset" class="me-2">Limpiar</button>
+                    <button type="submit" class="">Guardar</button>
+                </div>
             </article>
                
-                <button type="submit">Guardar</button>
               
-                    <button type="reset">Limpiar</button>
                 </div>
             </form>
         </section>
