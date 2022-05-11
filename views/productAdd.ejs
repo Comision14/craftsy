@@ -21,7 +21,7 @@
                       </div>
             </div>
             <hr>
-            <form method="POST" action="">
+            <form method="POST" action="" enctype="multipart/form-data">
                 <article>
                     
                 <div class="register__form-box">
@@ -46,27 +46,31 @@
                     <label for="origin">Origen</label>
                     <select class="register__form-select" name="origin" id="origin">
                         <option value="" hidden selected>Selecciona el origen...</option>
-                      <% categories.forEach(category => { %>
-                        <option value="<%= category.id %>"><%= category.name %></option>
-                      <% }) %>
+                        <option value="china">China</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="Estados Unidos">Estados Unidos</option>
+                        <option value="Taiwan">Taiwan</option>
                     </select>
                 </div>
                 <div class="register__form-box">
                     <label for="state">Estado</label>
                     <select class="register__form-select" name="state" id="state">
                         <option value="" hidden selected>Selecciona el origen...</option>
-                      <% categories.forEach(category => { %>
-                        <option value="<%= category.id %>"><%= category.name %></option>
-                      <% }) %>
+                        <option value="nuevo">Nuevo</option>
+                        <option value="refaccionado">Refaccionado</option>
                     </select>
                 </div>
-                <div class="register__form-box d-flex justify-content-end align-items-end">
-                    <button type="reset" class="me-2">Limpiar</button>
-                    <button type="submit" class="">Guardar</button>
-                </div>
+                <div class="register__form-box">
+                  <label for="image">Imagen</label>
+                  <input class="register__form-input" type="file" id="image" name="image" accept="image/*">
+              </div>
+              
             </article>
                
-              
+            <div class="register__form-box d-flex justify-content-end align-items-end">
+                <button type="reset" class="me-2 btn btn-secondary">Limpiar</button>
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
                 </div>
             </form>
         </section>

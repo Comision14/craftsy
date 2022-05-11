@@ -48,9 +48,9 @@
                 <section class="index__products">
                     <h4>Celulares</h4>
 
-                    <% celulares.forEach(({name,id})=> { %>
+                    <% celulares.forEach(({name,id,img})=> { %>
                         <article class="index__products__product">
-                            <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <a href="/products/detail/<%= id %>"><img src="/images/<%= img %>" alt=""></a>
                             <h4>
                                 <%= name %>
                             </h4>

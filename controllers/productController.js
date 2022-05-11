@@ -12,13 +12,7 @@ module.exports = {
         })
     },
     store : (req,res) => {
-
-        let {name,price,category,features} = req.body;
-
-        features = typeof features === "string" ? features.split() : features;
-        let inbox = features[1] ? true : false;
-        features[1] = inbox;
-       
+        let {name,price,category,state,origin} = req.body;
         let lastID = products[products.length - 1].id;
 
         let newProduct =  {
@@ -26,8 +20,8 @@ module.exports = {
             name : name.trim(),
             price: +price,
             category: +category,
-            img: "noimage.jpeg",
-            features
+            img: req.file ? req.file.filename : "noimage.jpeg",
+            features : [origin,state]
         }
 
         products.push(newProduct);
@@ -49,11 +43,7 @@ module.exports = {
     update : (req,res) => {
 
         const {id} = req.params;
-        let {name, price, category,features} = req.body;
-
-        features = typeof features === "string" ? features.split() : features;
-        let inbox = features[1] ? true : false;
-        features[1] = inbox;
+        let {name, price, category,state,origin} = req.body;
 
         const productsModify = products.map(product => {
             if(product.id === +id){
@@ -62,7 +52,13 @@ module.exports = {
                     name,
                     price : +price,
                     category : +category,
-                    features
+                    features: [origin,state],
+                    img : req.file ? req.file.filename : product.img,
+                }
+                if(req.file){
+                    if(fs.existsSync(path.resolve(__dirname,'..','public','images',product.img)) && product.img !== "noimage.jpeg"){
+                        fs.unlinkSync(path.resolve(__dirname,'..','public','images',product.img))
+                    }
                 }
                 return productModify
             }

@@ -13,8 +13,9 @@
         <section>
             <h2>Editar Producto: <%= product.name %></h2>
             <hr>
-            <form method="POST" action="/products/update/<%= product.id %>?_method=PUT">
+            <form method="POST" action="/products/update/<%= product.id %>?_method=PUT" enctype="multipart/form-data">
                 <article>
+                    <div><img src="/images/<%= product.img %>" alt=""></div>
                 <div class="register__form-box">
                     <label for="name">Nombre del producto</label>
                     <input class="register__form-input" type="text" id="name" name="name" value="<%= product.name %>">
@@ -33,29 +34,33 @@
                           </select>
                 </div>
                 <div class="register__form-box">
-                    <div class="d-flex align-content-center">
-                        <div>
-                            <label for="origin">Origen</label>
-                            <input class="register__form-input" type="text" value="<%= product.features[0] %>" id="origin" name="features">
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="in-box" name="features" <%= product.features[1] && 'checked' %>>
-                            <label class="form-check-label" for="in-box">
-                              Original
-                            </label>
-                          </div>
-                    </div>
-                  
-                  
+                    <label for="origin">Origen</label>
+                    <select class="register__form-select" name="origin" id="origin">
+                        <option value="china" <%= product.features[0].toLowerCase() === "china" && 'selected' %> >China</option>
+                        <option value="brasil" <%= product.features[0].toLowerCase() === "brasil" && 'selected' %> >Brasil</option>
+                        <option value="estados unidos" <%= product.features[0].toLowerCase() === "estados unidos" && 'selected' %> >Estados Unidos</option>
+                        <option value="taiwan" <%= product.features[0].toLowerCase() === "taiwan" && 'selected' %> >Taiwan</option>
+                    </select>
                 </div>
-              
+                <div class="register__form-box">
+                    <label for="state">Estado</label>
+                    <select class="register__form-select" name="state" id="state">
+                        <option value="nuevo" <%= product.features[1].toLowerCase() === "nuevo" && 'selected' %>>Nuevo</option>
+                        <option value="refaccionado" <%= product.features[1].toLowerCase() === "refaccionado" && 'selected' %>>Refaccionado</option>
+                    </select>
+                </div>
+                <div class="register__form-box">
+                    <label for="image">Imagen</label>
+                    <input class="register__form-input" type="file" id="image" name="image" accept="image/*">
+                </div>
+                 
             </article>
                
-              
-                    <button type="reset" class="btn btn-secondary">Limpiar</button>
-                    <button type="submit" class="btn btn-primary">Guardar</button>
-
-                </div>
+            <div class="register__form-box d-flex justify-content-end align-items-end">
+                <button type="reset" class="me-2 btn  btn-secondary">Limpiar</button>
+                <button type="submit" class="btn btn-success">Guardar</button>
+            </div>
+                  
             </form>
         </section>
 
