@@ -5,7 +5,9 @@
       "name": "Samsung S22",
       "price": 1000,
       "category": 1,
-      "img": "img-phone-01.jpg",
+      "img": [
+         "img-phone-01.jpg"
+      ],
       "features": [
          "Jamaica",
          "Usado"
@@ -17,7 +19,9 @@
       "name": "Iphone 11",
       "price": 2000,
       "category": 1,
-      "img": "img-phone-03.jpg",
+      "img": [
+         "img-phone-03.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -29,7 +33,9 @@
       "name": "Motorola E7",
       "price": 1800,
       "category": 1,
-      "img": "img-phone-01.jpg",
+      "img": [
+         "img-phone-01.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -41,7 +47,9 @@
       "name": "Nokia 1100",
       "price": 100,
       "category": 1,
-      "img": "img-phone-02.jpg",
+      "img": [
+         "img-phone-02.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -53,7 +61,9 @@
       "name": "Alcatel Z2",
       "price": 200,
       "category": 1,
-      "img": "img-phone-03.jpg",
+      "img": [
+         "img-phone-03.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -65,7 +75,9 @@
       "name": "Ipad 10",
       "price": 1000,
       "category": 2,
-      "img": "img-phone-01.jpg",
+      "img": [
+         "img-phone-01.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -77,7 +89,9 @@
       "name": "Galaxy Tab A7",
       "price": 3000,
       "category": 2,
-      "img": "img-phone-02.jpg",
+      "img": [
+         "img-phone-02.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -89,7 +103,9 @@
       "name": "Xiaomi Mi5",
       "price": 500,
       "category": 2,
-      "img": "img-phone-03.jpg",
+      "img": [
+         "img-phone-03.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -101,7 +117,9 @@
       "name": "Asus i7",
       "price": 20000,
       "category": 3,
-      "img": "img-phone-01.jpg",
+      "img": [
+         "img-phone-01.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -113,7 +131,9 @@
       "name": "Acer i3",
       "price": 10000,
       "category": 3,
-      "img": "img-phone-02.jpg",
+      "img": [
+         "img-phone-02.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -125,7 +145,9 @@
       "name": "HP ProBook 4520s",
       "price": 15000,
       "category": 3,
-      "img": "img-phone-03.jpg",
+      "img": [
+         "img-phone-03.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -137,7 +159,9 @@
       "name": "MacBook Air 13",
       "price": 30000,
       "category": 3,
-      "img": "img-phone-01.jpg",
+      "img": [
+         "img-phone-01.jpg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -149,7 +173,9 @@
       "name": "Asus i7 12Gb SDD 1TB",
       "price": 1000,
       "category": 3,
-      "img": "noimage.jpeg",
+      "img": [
+         "noimage.jpeg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -161,7 +187,9 @@
       "name": "Motorola G4",
       "price": 200,
       "category": 1,
-      "img": "image-1652277008623.png",
+      "img": [
+         "image-1652277008623.png"
+      ],
       "features": [
          "china",
          "nuevo"
@@ -173,7 +201,9 @@
       "name": "Samsung M12",
       "price": 1000,
       "category": 1,
-      "img": "image-1652276432483.png",
+      "img": [
+         "image-1652276432483.png"
+      ],
       "features": [
          "china",
          "nuevo"
@@ -185,7 +215,9 @@
       "name": "Ipad 11",
       "price": 2500,
       "category": 2,
-      "img": "noimage.jpeg",
+      "img": [
+         "noimage.jpeg"
+      ],
       "features": [
          "China",
          "Usado"
@@ -197,7 +229,9 @@
       "name": "Producto con categorias",
       "price": 10000,
       "category": 3,
-      "img": "noimage.jpeg",
+      "img": [
+         "noimage.jpeg"
+      ],
       "features": [
          "china",
          "usado"
@@ -208,7 +242,9 @@
       "name": "Motorola G200",
       "price": 1000,
       "category": 1,
-      "img": "image-1652274235215.png",
+      "img": [
+         "image-1652274235215.png"
+      ],
       "features": [
          "china",
          "nuevo"
@@ -219,7 +255,24 @@
       "name": "Samsung A22 negro",
       "price": 3000,
       "category": 1,
-      "img": "image-1652276219281.png",
+      "img": [
+         "image-1652276219281.png"
+      ],
+      "features": [
+         "brasil",
+         "nuevo"
+      ]
+   },
+   {
+      "id": 20,
+      "name": "Samsung M12",
+      "price": 3000,
+      "category": 1,
+      "img": [
+         "image-1652448587454.png",
+         "image-1652448587460.png",
+         "image-1652448587525.png"
+      ],
       "features": [
          "brasil",
          "nuevo"

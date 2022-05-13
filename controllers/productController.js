@@ -14,13 +14,13 @@ module.exports = {
     store : (req,res) => {
         let {name,price,category,state,origin} = req.body;
         let lastID = products[products.length - 1].id;
-
+        let images = req.files.map(image => image.filename);
         let newProduct =  {
             id: +lastID + 1,
             name : name.trim(),
             price: +price,
             category: +category,
-            img: req.file ? req.file.filename : "noimage.jpeg",
+            img: images.length > 0 ? images : ["noimage.jpeg"],
             features : [origin,state]
         }
 

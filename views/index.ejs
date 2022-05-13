@@ -50,7 +50,7 @@
 
                     <% celulares.forEach(({name,id,img})=> { %>
                         <article class="index__products__product">
-                            <a href="/products/detail/<%= id %>"><img src="/images/<%= img %>" alt=""></a>
+                            <a href="/products/detail/<%= id %>"><img src="/images/<%= img[0] %>" alt=""></a>
                             <h4>
                                 <%= name %>
                             </h4>
@@ -64,9 +64,9 @@
                 <section class="index__products">
                     <h4>Tablets</h4>
 
-                    <% tablets.forEach(({name,id})=> { %>
+                    <% tablets.forEach(({name,id,img})=> { %>
                         <article class="index__products__product">
-                            <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <a href="/products/detail/<%= id %>"><img src="/images/<%= img[0] %>" alt=""></a>
                             <h4>
                                 <%= name %>
                             </h4>
@@ -80,9 +80,9 @@
                 <section class="index__products">
                     <h4>Computadoras</h4>
 
-                    <% computadoras.forEach(({name,id})=> { %>
+                    <% computadoras.forEach(({name,id,img})=> { %>
                         <article class="index__products__product">
-                            <a href="/products/detail/<%= id %>"><img src="/images/img-phone-01.jpg" alt=""></a>
+                            <a href="/products/detail/<%= id %>"><img src="/images/<%= img[0] %>" alt=""></a>
                             <h4>
                                 <%= name %>
                             </h4>

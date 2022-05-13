@@ -22,7 +22,7 @@ const upload = multer({
 /* /products */
 router
     .get('/add',add)
-    .post('/add',upload.single('image'),store)
+    .post('/add',upload.array('image'),store)
     .get('/edit/:id',edit)
     .put('/update/:id',upload.single('image'),update)
     .get('/cart', cart)

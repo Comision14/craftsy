@@ -14,11 +14,11 @@
                     <div class="row">
                         <div class="col-12 col-md-5 col-lg-5">
                             <div class="card-body">
-                                <img src="/images/img-phone-01.jpg" class="img-fluid" alt="...">
+                                <img src="/images/<%= product.img[0] %>" class="img-fluid" alt="..." id="imgMaster">
                                 <div class="d-flex mt-2">
-                                    <img style="width: 33.3%;" src="/images/img-phone-01.jpg" alt="...">
-                                    <img style="width: 33.3%;" src="/images/img-phone-02.jpg" alt="...">
-                                    <img style="width: 33.3%;" src="/images/img-phone-03.jpg" alt="...">
+                                    <% product.img.forEach(image => { %>
+                                        <img style="width: 33.3%;" src="/images/<%= image %>" alt="..." onclick="document.getElementById('imgMaster').src = this.src">
+                                    <% }) %>
                                 </div>
                             </div>
                         </div>
