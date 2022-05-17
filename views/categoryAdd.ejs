@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head',{
+        title : 'Nueva categoría'
+    })  %> 
+
+
+<body class="register">
+    <%- include('./partials/header_admin') %> 
+
+    <main>
+        <section>
+            <div class="d-flex justify-content-between">
+                <h2>Agregar Categoría</h2>
+                   
+            </div>
+            <hr>
+            <form method="POST" action="" >
+                <article>
+                    
+                <div class="register__form-box">
+                    <label for="name">Nombre de la categoría</label>
+                    <input class="register__form-input" type="text" id="name" name="name">
+                </div>
+               
+              
+            </article>
+               
+            <div class="register__form-box d-flex justify-content-end align-items-end">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

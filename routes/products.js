@@ -4,7 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 
 //const controlador = require('../controllers/productController')
-const {cart,detail,getByCategory, search, add, store,edit, update,remove} = require('../controllers/productController');
+const {cart,detail,getByCategory, search, add, store,edit, update,remove, list} = require('../controllers/productController');
 
 /* MULTER */
 const storage = multer.diskStorage({
@@ -30,5 +30,6 @@ router
     .get('/category/:idCategory/:idProduct?',getByCategory)
     .get('/search',search)
     .delete('/remove/:id',remove)
+    .get('/list',list)
 
 module.exports = router;

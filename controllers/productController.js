@@ -2,7 +2,7 @@ const res = require('express/lib/response');
 const fs = require('fs');
 const path = require('path');
 
-const categories = require('../data/categories');
+const categories = require('../data/categories.json');
 const products = require('../data/products.json');
 
 module.exports = {
@@ -83,11 +83,11 @@ module.exports = {
 
         const {idCategory} = req.params;
 
-        const {name, products} = categories.find(category => category.id === +idCategory);
+        const {name} = categories.find(category => category.id === +idCategory);
 
         return res.render('categories',{
             name,
-            products
+            products : products.filter(product => product.category === +idCategory)
         })
     },
     search : (req,res) => {
@@ -117,5 +117,13 @@ module.exports = {
 
         return res.redirect('/')
 
+    },
+    list : (req,res) => {
+
+        return res.render('adminProducts',{
+            products
+        }
+        
+        )
     }
 }

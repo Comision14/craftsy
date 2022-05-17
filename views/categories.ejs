@@ -24,9 +24,9 @@
                               </tr>
                             </thead>
                             <tbody>
-                                <% products.forEach(({id,name,price}) => { %>
+                                <% products.forEach(({id,name,price},index) => { %>
                                     <tr>
-                                        <th scope="row"><%= id %> </th>
+                                        <th scope="row"><%= index + 1 %> </th>
                                         <td><%= name %> </td>
                                         <td><%= price %> </td>
                                         <td><a href="" class="btn btn-sm btn-primary"><i class="fas fa-eye"></i></a></td>

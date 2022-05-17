@@ -9,6 +9,8 @@ const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const categoriesRouter = require('./routes/categories');
+
 
 var app = express();
 
@@ -28,6 +30,7 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
+app.use('/categories', categoriesRouter);
 
 
 /* app.get('/',(req,res) => res.sendFile(path.resolve(__dirname,'views','index.html')));

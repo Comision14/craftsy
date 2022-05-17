@@ -17,6 +17,9 @@ module.exports = {
             computadoras,
             tutorials
         })
+    },
+    admin : (req,res) => {
+    return res.render('admin')
     }
 }
 
