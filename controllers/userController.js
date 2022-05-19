@@ -1,4 +1,11 @@
 module.exports = {
-    register : (req,res) => res.render('register'),
-    login : (req,res) => res.render('login')
+    register : (req,res) => {
+        return res.render('register')
+    },
+    processRegister : (req,res) => {
+        return res.send(req.body)
+    },
+    login : (req,res) => {
+        return res.render('login')
+    }
 }
