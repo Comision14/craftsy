@@ -26,39 +26,44 @@
                     
                 <div class="register__form-box">
                     <label for="name">Nombre del producto</label>
-                    <input class="register__form-input" type="text" id="name" name="name">
+                    <input class="register__form-input form-control <%= locals.errors && errors.name ? 'is-invalid' : null%>" type="text" id="name" name="name" value="<%= locals.old && old.name ? old.name : null%>">
+                    <span class="text-danger"><%= locals.errors && errors.name ? errors.name.msg : null%> </span>
                 </div>
                 <div class="register__form-box">
                     <label for="price">Precio</label>
-                    <input class="register__form-input" type="number" id="price" name="price">
+                    <input class="register__form-input form-control <%= locals.errors && errors.price ? 'is-invalid' : null%>" type="number" id="price" name="price" value="<%= locals.old && old.price ? old.price : null%>">
+                    <span class="text-danger"><%= locals.errors && errors.price ? errors.price.msg : null%> </span>
                 </div>
          
                 <div class="register__form-box">
                         <label for="category">Categorias</label>
-                        <select class="register__form-select" name="category" id="category">
+                        <select class="register__form-select form-control <%= locals.errors && errors.category ? 'is-invalid' : null%>" name="category" id="category">
                             <option value="" hidden selected>Selecciona la categoría...</option>
                           <% categories.forEach(category => { %>
-                            <option value="<%= category.id %>"><%= category.name %></option>
+                            <option <%= locals.old && old.category && +old.category === +category.id ? 'selected' : null %>  value="<%= category.id %>"><%= category.name %></option>
                           <% }) %>
                         </select>
+                        <span class="text-danger"><%= locals.errors && errors.category ? errors.category.msg : null%> </span>
                 </div>
                 <div class="register__form-box">
                     <label for="origin">Origen</label>
-                    <select class="register__form-select" name="origin" id="origin">
+                    <select class="register__form-select form-control <%= locals.errors && errors.origin ? 'is-invalid' : null%>" name="origin" id="origin">
                         <option value="" hidden selected>Selecciona el origen...</option>
-                        <option value="china">China</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="Estados Unidos">Estados Unidos</option>
-                        <option value="Taiwan">Taiwan</option>
+                        <option  <%= locals.old && old.origin && old.origin === "china" ? 'selected' : null %>   value="china">China</option>
+                        <option <%= locals.old && old.origin && old.origin === "brasil" ? 'selected' : null %> value="brasil">Brasil</option>
+                        <option <%= locals.old && old.origin && old.origin === "Estados Unidos" ? 'selected' : null %> value="Estados Unidos">Estados Unidos</option>
+                        <option <%= locals.old && old.origin && old.origin === "Taiwan" ? 'selected' : null %> value="Taiwan">Taiwan</option>
                     </select>
+                    <span class="text-danger"><%= locals.errors && errors.origin ? errors.origin.msg : null%> </span>
                 </div>
                 <div class="register__form-box">
                     <label for="state">Estado</label>
-                    <select class="register__form-select" name="state" id="state">
+                    <select class="register__form-select form-control <%= locals.errors && errors.state ? 'is-invalid' : null%>" name="state" id="state">
                         <option value="" hidden selected>Selecciona el origen...</option>
-                        <option value="nuevo">Nuevo</option>
-                        <option value="refaccionado">Refaccionado</option>
+                        <option <%= locals.old && old.state && old.state === "nuevo" ? 'selected' : null %> value="nuevo">Nuevo</option>
+                        <option <%= locals.old && old.state && old.state === "refaccionado" ? 'selected' : null %> value="refaccionado">Refaccionado</option>
                     </select>
+                    <span class="text-danger"><%= locals.errors && errors.state ? errors.state.msg : null%> </span>
                 </div>
                 <div class="register__form-box">
                   <label for="image">Imagen</label>

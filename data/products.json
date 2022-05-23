@@ -277,5 +277,18 @@
          "brasil",
          "nuevo"
       ]
+   },
+   {
+      "id": 21,
+      "name": "Iphone X",
+      "price": 1000,
+      "category": 2,
+      "img": [
+         "image-1653053657537.png"
+      ],
+      "features": [
+         "brasil",
+         "refaccionado"
+      ]
    }
 ]
