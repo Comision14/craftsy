@@ -64,6 +64,12 @@ module.exports = {
           nombre,
           rol
       }
+
+      if(req.body.recordame){
+        res.cookie("userCraftsy14", req.session.userLogin,{maxAge: 1000*60*2})
+      }
+
+
       return res.redirect("/");
 
     }else {
