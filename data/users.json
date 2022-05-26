@@ -1,9 +1,18 @@
 [
    {
       "id": 1,
-      "name": "Eric",
+      "nombre": "Eric",
       "apellido": "Mena",
       "email": "menaericdaniel@gmail.com",
-      "password": "123123"
+      "password": "$2a$10$Mef9M.vJ23aT4io9lqWA3.KFZLk/KEaB/lnnp1R4BoQ/Ed71t.oZS",
+      "rol": "admin"
+   },
+   {
+      "id": 2,
+      "nombre": "Noelia",
+      "apellido": "Acosta",
+      "email": "noelia@acosta.com",
+      "password": "$2a$10$TMIh31JhcA.pbGoPOgmYLupZyxTx44UrxBIEQMjgaYgwEsHQPFq3m",
+      "rol": "user"
    }
 ]

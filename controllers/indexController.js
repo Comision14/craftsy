@@ -4,7 +4,7 @@ const tutorials = require('../data/tutorials');
 
 module.exports = {
     index: (req, res) => {
-
+        console.log(req.session.userLogin)
         const products = JSON.parse(fs.readFileSync(path.resolve(__dirname,'..','data','products.json')));
 
         const celulares = products.filter(product => product.category === 1);

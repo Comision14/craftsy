@@ -11,18 +11,20 @@
         <section>
             <h1>Ingresá</h1>
             <hr>
-            <form>
+            <form method="POST">
                 <article>
 
                 <div class="login__form-box">
                     <label for="email">Email</label>
                     <input class="login__form-input" type="email" id="email" name="email" placeholder="Escribí tu email">
-                     <span class="login__text-error" hidden>Obligatorio</span>
+                    <span class="login__text-error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
+
                 </div>
                 <div class="login__form-box">
                     <label for="password">Contraseña</label>
                     <input class="login__form-input" type="password" id="password" name="password" placeholder="Escribí tu contraseña">
-                     <span class="login__text-error">Obligatorio</span>
+                    <span class="login__text-error"><%= locals.errores && errores.password ? errores.password.msg : null %></span>
+
                 </div>
               
                 <div class="login__form-box login__center">
