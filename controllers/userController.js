@@ -82,6 +82,7 @@ module.exports = {
   },
   logout : (req,res) => {
     req.session.destroy();
+    res.cookie('userCraftsy14',null,{maxAge : -1})
     return res.redirect('/')
   }
 };

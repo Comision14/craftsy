@@ -37,8 +37,8 @@ app.use(session({
 
 }));
 
-app.use(localsCheck);
 app.use(cookieCheck);
+app.use(localsCheck);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -239,6 +239,7 @@
    },
    {
       "id": 18,
+      "visible": true,
       "name": "Motorola G200",
       "price": 1000,
       "category": 1,
@@ -252,6 +253,7 @@
    },
    {
       "id": 19,
+      "visible": true,
       "name": "Samsung A22 negro",
       "price": 3000,
       "category": 1,
@@ -265,6 +267,7 @@
    },
    {
       "id": 20,
+      "visible": true,
       "name": "Samsung M12",
       "price": 3000,
       "category": 1,
@@ -280,6 +283,7 @@
    },
    {
       "id": 21,
+      "visible": true,
       "name": "Iphone X",
       "price": 1000,
       "category": 2,

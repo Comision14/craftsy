@@ -24,6 +24,7 @@ module.exports = {
         category: +category,
         img: images.length > 0 ? images : ["noimage.jpeg"],
         features: [origin, state],
+        visible : visible ? true : false
       };
 
       products.push(newProduct);
