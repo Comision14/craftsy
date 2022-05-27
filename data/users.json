@@ -2,10 +2,12 @@
    {
       "id": 1,
       "nombre": "Eric",
-      "apellido": "Mena",
+      "apellido": "Garcia",
       "email": "menaericdaniel@gmail.com",
       "password": "$2a$10$Mef9M.vJ23aT4io9lqWA3.KFZLk/KEaB/lnnp1R4BoQ/Ed71t.oZS",
-      "rol": "admin"
+      "rol": "admin",
+      "fecha": "",
+      "domicilio": ""
    },
    {
       "id": 2,

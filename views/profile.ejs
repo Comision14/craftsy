@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('./partials/head',{
+        title : 'Registro'
+    })  %> 
+
+
+<body class="register">
+    <%- include('./partials/header') %> 
+
+    <main>
+        <section>
+            <h1>Perfil de usuario</h1>
+            <hr>
+            <form method="POST" action="/users/update-profile?_method=PUT">
+                <article>
+                <div class="register__form-box">
+                    <label for="nombre">Nombre</label>
+                    <input class="register__form-input form-control <%= locals.errores && errores.nombre ? 'is-invalid' : null %>" type="text" id="nombre" name="nombre" placeholder="Escribí tu nombre" value="<%= usuario.nombre %>">
+                     <span class="register__text-error"><%= locals.errores && errores.nombre ? errores.nombre.msg : null %></span>
+                </div>
+                <div class="register__form-box">
+                    <label for="apellido">Apellido</label>
+                    <input class="register__form-input form-control <%= locals.errores && errores.apellido ? 'is-invalid' : null %>" type="text" id="apellido" name="apellido" placeholder="Escribí tu apellido"  value="<%= usuario.apellido %>">
+                    <span class="register__text-error"><%= locals.errores && errores.apellido ? errores.apellido.msg : null %></span>
+                </div>
+                <div class="register__form-box">
+                    <label for="fecha">Fecha de nacimiento</label>
+                    <input class="register__form-input form-control <%= locals.errores && errores.fecha ? 'is-invalid' : null %>" type="date" id="fecha" name="fecha" placeholder="Escribí tu fecha" value="<%= usuario.fecha %>">
+                     <span class="register__text-error"><%= locals.errores && errores.fecha ? errores.fecha.msg : null %></span>
+                </div>
+                <div class="register__form-box">
+                    <label for="domicilio">Domicilio</label>
+                    <input class="register__form-input form-control <%= locals.errores && errores.domicilio ? 'is-invalid' : null %>" type="text" id="domicilio" name="domicilio" placeholder="Escribí tu domicilio"  value="<%= usuario.domicilio %>">
+                    <span class="register__text-error"><%= locals.errores && errores.domicilio ? errores.domicilio.msg : null %></span>
+                </div>
+                <div class="register__form-box">
+                    <label for="email">Email</label>
+                    <input class="register__form-input form-control <%= locals.errores && errores.email ? 'is-invalid' : null %>" type="email" id="email" name="email" placeholder="Escribí tu email"  value="<%= usuario.email %>" disabled>
+                    <span class="register__text-error"><%= locals.errores && errores.email ? errores.email.msg : null %></span>
+                </div>
+            
+                        <div class="d-flex justify-content-around align-items-center ">
+                            <button class="me-2" type="submit">Guardar cambios</button>
+                            <a href="/">
+                                <button type="button">Cancelar</button>
+                            </a>
+                        </div>
+ 
+                     <article>
+                      
+              
+            </form>
+        </section>
+
+    </main>
+
+</body>
+
+</html>
