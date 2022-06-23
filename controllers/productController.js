@@ -68,17 +68,17 @@ module.exports = {
             price: +price,
             category: +category,
             features: [origin, state],
-            img: req.file ? req.file.filename : product.img,
+            img: req.file ? [req.file.filename] : product.img,
           };
           if (req.file) {
             if (
               fs.existsSync(
-                path.resolve(__dirname, "..", "public", "images", product.img)
+                path.resolve(__dirname, "..", "public", "images", product.img[0])
               ) &&
               product.img !== "noimage.jpeg"
             ) {
               fs.unlinkSync(
-                path.resolve(__dirname, "..", "public", "images", product.img)
+                path.resolve(__dirname, "..", "public", "images", product.img[0])
               );
             }
           }

@@ -6,11 +6,11 @@
       "price": 1000,
       "category": 1,
       "img": [
-         "img-phone-01.jpg"
+         "image-1655949819123.png"
       ],
       "features": [
-         "Jamaica",
-         "Usado"
+         "china",
+         "nuevo"
       ]
    },
    {
@@ -37,8 +37,8 @@
          "img-phone-01.jpg"
       ],
       "features": [
-         "China",
-         "Usado"
+         "china",
+         "nuevo"
       ]
    },
    {
@@ -288,7 +288,7 @@
       "price": 1000,
       "category": 2,
       "img": [
-         "image-1653053657537.png"
+         "image-1655949549628.png"
       ],
       "features": [
          "brasil",
